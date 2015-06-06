@@ -16,12 +16,11 @@ body {
 
 .fall-away {
 	display: inline-block;
+    opacity: 0;
 	position: relative;
 	height: 200px;
-	-webkit-animation: drop 4s 1;
-	-webkit-animation-delay: 5s;
+	-webkit-animation: drop 8s;
 	-webkit-animation-direction: normal;
-	-webkit-animation-fill-mode: forwards;
 }
 
 span.shadow{
@@ -30,9 +29,16 @@ span.shadow{
 }
 
 @-webkit-keyframes drop {
-0% { -webkit-transform: rotate(0deg); }
-25% { -webkit-transform: rotate(300deg); }
-50%  {top:0px; }
-75%  {top:1000px; }
-100% {display: none;}
+0% {
+    opacity: 1;
+}
+50% {
+    -webkit-transform: rotate(0deg); }
+60% {
+     -webkit-transform: rotate(300deg); }
+70%  {top:0px;}
+80%  {
+    opacity: 1;
+    top:1200px;}
+90% { opacity: 0;}
 }
