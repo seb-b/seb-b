@@ -20,7 +20,7 @@ body {
 	position: relative;
 	height: 200px;
 	-webkit-animation: drop 8s;
-	-webkit-animation-direction: normal;
+    animation: drop 8s;
 }
 
 span.shadow{
@@ -41,4 +41,15 @@ span.shadow{
     opacity: 1;
     top:1200px;}
 90% { opacity: 0;}
+}
+
+@keyframes drop {
+  0% {opacity: 1;}
+  50% { transform: rotate(0deg);}
+  60% { transform: rotate(300deg); }
+  70%  {top:0px; }
+  80%  {
+    opacity: 1;
+    top:1200px; }
+  90% {opacity: 0;}
 }
