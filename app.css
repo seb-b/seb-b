@@ -4,33 +4,26 @@ body {
 	overflow-y: hidden;
 	color: white;
 	position: relative;
+	text-align: center;
 	font-weight: 600;
 	font-family: 'Muli', sans-serif;
 }
 
 #title-wrapper {
+	margin-top: 30px;
 	color: red;
 	font-size: 7em;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	margin-top: 50px;
 }
 
 #about {
-	top: 190px;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-
+	max-width: 75%;
+	margin: 0 auto;
 }
 
 #rupert-murdochs {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	margin-top: 260px;
+	margin-top: 20px;
 	display: flex;
+	justify-content: center;
 }
 
 #rupert-murdochs > a > svg {
@@ -51,7 +44,12 @@ body {
 }
 
 a {
+	transition: color 100ms ease-in-out;
 	color: red;
+}
+
+a:hover {
+	color: #ff4646;
 }
 
 .fall-away {
