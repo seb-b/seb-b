@@ -1,0 +1,129 @@
+:root {
+  --padding-rythm: 20px;
+  --gap: 45px;
+}
+
+body {
+  background: black;
+  animation: body-bg 30s infinite;
+}
+
+@keyframes body-bg {
+  0% {
+    background: black;
+  }
+
+  /* 25% {
+    background: linear-gradient(to top right, black, red);
+  } */
+
+  40% {
+    background: red;
+  }
+
+  60% {
+    background: red;
+  }
+  /* 
+  75% {
+    background: linear-gradient(to bottom left, black red);
+  } */
+  100% {
+    background: black;
+  }
+}
+
+.resume {
+  background: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: left;
+  max-width: 1200px;
+  margin: var(--gap) auto 0 auto;
+  column-gap: var(--gap);
+  padding-bottom: var(--padding-rythm);
+}
+
+.resume h3 {
+  font-size: 28px;
+}
+
+.resume__sidebar-top {
+  background: red;
+  padding: var(--padding-rythm);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  margin-bottom: var(--gap);
+}
+
+.resume__sidebar {
+  grid-column: 1 / span 1;
+}
+
+.resume__mug {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+
+.contact-info {
+  padding: var(--padding-rythm);
+  padding-top: 0;
+  margin: 0;
+}
+
+.contact-info > dd {
+  margin: 0;
+}
+
+.resume__main {
+  grid-column: 2 / span 3;
+}
+
+.resume__section {
+  padding: var(--padding-rythm);
+  padding-left: 0;
+  border-bottom: 2px solid red;
+}
+
+.resume__section > h3 {
+  margin-top: 0;
+}
+
+.experience {
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: auto auto;
+  border-top: 1px solid #b13b3b;
+  padding-top: var(--padding-rythm);
+}
+
+.experience > h4 {
+  grid-area: 1 / 1 / 1 / span 2;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.experience > p {
+  margin: 0;
+}
+
+.skills__pair {
+  display: grid;
+  grid-template-columns: 100px auto;
+  border-top: 1px solid #b13b3b;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+.skills__pair > h4 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.skills__pair > ul {
+  margin: 0;
+}

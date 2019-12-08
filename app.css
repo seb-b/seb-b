@@ -1,80 +1,82 @@
 body {
-	background: black;
-	font-family: Arial, Helvetica, sans-serif;
-	overflow-y: hidden;
-	color: white;
-	position: relative;
-	text-align: center;
-	font-weight: 600;
-	font-family: 'Muli', sans-serif;
+  cursor: url("images/cursor.png"), auto !important;
+  background: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  position: relative;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Muli", sans-serif;
 }
 
 #title-wrapper {
-	margin-top: 30px;
-	color: red;
-	font-size: 7em;
+  margin-top: 30px;
+  color: red;
+  font-size: 7em;
 }
 
 #about {
-	max-width: 75%;
-	margin: 0 auto;
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 #rupert-murdochs {
-	margin-top: 20px;
-	display: flex;
-	justify-content: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 #rupert-murdochs > a > svg {
-	color: white;
-	display: block;
-	width: 44px;
-	height: 44px;
-	margin-right: 20px;
-	transition: all 250ms ease-in-out;
+  color: white;
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin-right: 20px;
+  transition: all 250ms ease-in-out;
 }
 
 #rupert-murdochs > a:last-child > svg {
-	margin-right: 0;
+  margin-right: 0;
 }
 
 #rupert-murdochs > a > svg:hover {
-	color: red;
+  color: red;
+  cursor: url("images/cursor.png"), auto;
+  curson: none;
 }
 
 a {
-	transition: color 100ms ease-in-out;
-	color: red;
+  transition: color 100ms ease-in-out;
+  color: red;
 }
 
 a:hover {
-	color: #ff4646;
+  color: #ff4646;
 }
 
 .fall-away {
-	display: inline-block;
-	animation: drop 20s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-	transform-origin: bottom left;
-	z-index: 1;
+  display: inline-block;
+  animation: drop 20s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transform-origin: bottom left;
+  z-index: 1;
 }
 
-span.shadow{
-	position: absolute;
-	color: white;
-	z-index: -1;
+span.shadow {
+  position: absolute;
+  color: white;
+  z-index: -1;
 }
 
 @keyframes drop {
-	92% {
-		transform: none;
-	}
-	97% {
-		transform: translate(12px, -5px) rotate(220deg);
-	}
-	100% {
-		transform: translate(20px, 500vh) rotate(-180deg);
-	}
+  92% {
+    transform: none;
+  }
+  97% {
+    transform: translate(12px, -5px) rotate(220deg);
+  }
+  100% {
+    transform: translate(20px, 500vh) rotate(-180deg);
+  }
 }
