@@ -6,6 +6,7 @@
 body {
   background: black;
   animation: body-bg 30s infinite;
+  overflow: visible;
 }
 
 @keyframes body-bg {
