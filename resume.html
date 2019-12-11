@@ -5,7 +5,7 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,700&display=swap" rel="stylesheet">
         <meta charset="utf8">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
-        <title>🤔</title>
+        <title>🤔 Resume - Seb Brown</title>
     </head>
     <body>
         <div class='resume'>
@@ -37,7 +37,7 @@
                     <p>
                         I have worked in the Tasmanian ICT sector for the last 8 years. I graduated from UTAS with a bachelor of computing in 2011.
                         I bring a strong work ethic and a solid technical foundation to any organisation.
-                        I enjoy work that allows me to bring creative solution to technical problems while learning from other members of a team.
+                        I enjoy work that allows me to bring creative solutions to technical problems, focusing on the intersection of users and the web.
                     </p>
                 </div>
                 <div class='resume__section'>
@@ -76,8 +76,52 @@
                     </div>
                 </div>
                 <div class='resume__section'>
+                    <h3>Key projects</h3>
+                    <div class='projects'>
+                    <h4>Digital Ready Checkup</h4>
+                    <p>
+                        URL: <a href="https://checkup.digitalready.tas.gov.au/">https://checkup.digitalready.tas.gov.au/</a><br/>
+                        Client: Department of State Growth<br/><br/>
+                        This project was a good chance to flex my skills across frontend, backend and devops. The whole app had to work asynchronous so it could 
+                        deal with with constant user input from the 'chat' while the backend was working in the background with the long running proccesses 
+                        used to analyze the websites. To achieve this, websockets were used to send info back and forth between the frontend, written
+                        in React, and the backend, written in Python and using Tornado as a framework. AWS lambda was used to offload the long running
+                        processes e.g. we were able to package a slimmed down Chrome binary that ran Google lighthouse against a url, all within a standard Node lambda environment.
+                         I was really happy with the end product and since launch we've been able to add in more website analysis tests and extend
+                        and enhance the frontend with minimal friction because of how the app was architected.
+                    </p>
+                    <h4>Festival of Bright Ideas</h4>
+                    <p>
+                        URL: <a href="https://festivalofbrightideas.com.au/">https://festivalofbrightideas.com.au/</a><br/>
+                        Client: Luminous Events<br/><br/>
+                        The design for this website included multi leveled parallax scrolling for the home page. There's three levels working at different speeds, 
+                        the 'clouds' (blue and pink), the white stars and then the images and text. I couldn't find an off-the-shelf package that did exactly 
+                        what I needed so I ended up building it from scracth using vanilla js. I included this project because I was working closely with designer on the
+                        implementation, going back and forth on the scrolling speed, the posistioning of all the different elements and the layout so it worked on all 
+                        screen sizes. I think together we created a great user experience without sacrificing performance. The custom nature of the solution meant I could 
+                        change it on the fly to meet any tweaks in the design.
+                    </p>
+                    <h4>Infrastructure Overhaul</h4>
+                        Client: Neon Jungle<br/><br/>
+                        When I started at Neon Jungle deployments were done using shell scripts, manually triggered by a developer, pushed out to a vps that nobody was
+                        quite sure where it was. Since taking over the infrastucture, all sites and apps are now containerised using Docker. Logging is pushed out to an external
+                        service and Bugsnag was added to automatically notify of any production errors. Building and deploying of containers is all automated using Gitlab pipelines,
+                        so that any push to a master branch for a site runs the test suite and deploys on success. This means the master branch can be the source of truth and no developer 
+                        can deploy the wrong code, or overwrite another developers deployment. All ~40 sites once containerised were able to fit on a single 
+                        micro ec2 instance, with routing and SSL handled by Traefik, significantly reducing hosting costs.
+                    <h4>Earthling Cup</h4>
+                        URL: <a href="https://earthlingcup.com">https://earthlingcup.com</a></br>
+                        Client: Blue Chapel<br/><br/>
+                        Using the Shopify API I was able to create a bespoke frontend not possible using the standard Shopify site builder. All interactions including cart management,
+                        inventory levels and stock info is handled via the API. All information about stock is entered via Wagtail (the CMS) and then sent to Shopify so the client doesn't need to 
+                        ever use Shopify directly. Shopify can then be leveraged when needed to for things like shipping calculations and payment processing. 
+                    </div>
+                </div>
+                <div class='resume__section'>
                     <h3>Skills</h3>
-                    <p>A selection of key technology areas I have extensive experience utilising with some example frameworks/applications</p>
+                    <p>
+                        A selection of key technology areas I have extensive experience utilising with some example frameworks/applications.
+                    </p>
                     <div class='skills'>
                         <div class='skills__pair'>
                             <h4>Python</h4>
@@ -97,6 +141,7 @@
                                 <li>Flow</li>
                                 <li>Webpack</li>
                                 <li>Websockets</li>
+                                <li>Flux</li>
                             </ul>
                         </div>
                         <div class='skills__pair'>
@@ -134,6 +179,8 @@
                                 <li>Amazon EC2 + Lightsail</li>
                                 <li>NginX</li>
                                 <li>Systemd</li>
+                                <li>Ansible</li>
+                                <li>AWS Lambda</li>
                             </ul>
                         </div>
                         <div class='skills__pair'>
@@ -146,6 +193,7 @@
                         <div class='skills__pair'>
                             <h4>Java</h4>
                             <ul>
+                                <li>Eclipse</li>
                                 <li>FreeMarker</li>
                                 <li>Guice</li>
                                 <li>Tomcat</li>
@@ -155,9 +203,12 @@
                 </div>
                 <div class='resume__section'>
                     <h3>Awards</h3>
-                    <p>2019 - Diemen Awards Finalist x 2 (Website)</p>
-                    <p>2018 - Diemen Awards Finalist (Website)</p>
-                    <p>2017 - Diemen Awards Finalist x 2 (Website, Mobile)</p>
+                    <p>2019 - Finalist Diemen Awards (Website) - <a href="https://neonjungle.studio">Neon Jungle Website</a></p>
+                    <p>2019 - Finalist Diemen Awards (Website) - <a href="https://jane.edu.au/">Jane Franklin Hall</a></p>
+                    <p>2018 - Finalist Diemen Awards (Website) - <a href="https://www.theunconformity.com.au/">The Unconformity</a></p>
+                    <p>2017 - Finalist Diemen Awards (Mobile) - <a href="https://diemenawards.com.au/archives/awards/mystate-discover">MyState Discover</a></p>
+                    <p>2017 - Finalist Diemen Awards (Website) - <a href="https://griffitharchive.griffith.edu.au/">Griffith University Archive</a></p>
+                    <p>2016 - Winner Dieman Awards (Website) - <a href="https://www.theunconformity.com.au/">The Unconformity</a></p>
                     <p>2009 - Dean's Roll of Excelllence (UTAS)</p>
                 </div>
             </div>

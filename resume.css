@@ -114,12 +114,30 @@ body {
   margin: 0;
 }
 
+.projects > h4 {
+  font-size: 22px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .skills__pair {
   display: grid;
-  grid-template-columns: 100px auto;
-  border-top: 1px solid var(--section-line);
-  padding-bottom: 10px;
-  padding-top: 15px;
+  grid-template-columns: 80px auto;
+  padding: var(--padding-rythm);
+}
+
+.skills__pair:nth-child(odd) {
+  border-right: 1px solid var(--section-line);
+}
+
+.skills__pair:not(:last-of-type) {
+  border-bottom: 1px solid var(--section-line);
 }
 
 .skills__pair > h4 {
